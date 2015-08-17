@@ -9,11 +9,34 @@ public class UncoupledInteger {
 
 		int[] array = {2,7,2,8,5,1,1,7,8,5,9};
 
-		int uncoupled = findUncoupledInteger(array);
+		int uncoupled = UncoupledInteger.findUncoupledInteger(array);
+		System.out.println("1. " + uncoupled);
 
-		System.out.println(uncoupled);
+		uncoupled = UncoupledInteger.findUncoupledBitManipulation(array);
+		System.out.println("2. " + uncoupled);
+
 	}
 
+	/*
+	 * Using XOR bit manipulation
+	 */
+	public static int findUncoupledBitManipulation(int[] array) {
+
+		if (array == null || array.length == 0) {
+			throw new RuntimeException("Array cannot be empty");
+		}
+
+		int sum = 0;
+		for (int value : array) {
+			sum ^= value;
+		}
+
+		return sum;
+	}
+
+	/*
+	 * Using Set to hold visited numbers
+	 */
 	public static int findUncoupledInteger(int[] array) {
 
 		if (array == null || array.length == 0) {
