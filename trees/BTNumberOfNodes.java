@@ -1,5 +1,3 @@
-
-
 /**
  * Count the number of nodes on a binary tree
  */
