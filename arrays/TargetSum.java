@@ -42,7 +42,7 @@ public class TargetSum {
 		int leftIndex = 0;
 		int rightIndex = array.length - 1;
 
-		while (true) {
+		while (leftIndex != rightIndex) {
 
 			int valueLeft = array[leftIndex];
 			int valueRight = array[rightIndex];
@@ -56,11 +56,9 @@ public class TargetSum {
 			} else {
 				leftIndex++;
 			}
-
-			if (leftIndex == rightIndex) {
-				return false;
-			}
 		}
+
+		return false;
 	}
 
 	private static void sort(int[] array) {
