@@ -37,7 +37,7 @@ public class BalancedDelimiters {
 
 			char c = delimiters.charAt(i);
 
-			if (c == '(' || c == '{' || c == '[') {
+			if (isOpener(c)) {
 
 				stack.push("" + c);
 
@@ -49,16 +49,7 @@ public class BalancedDelimiters {
 
 				String lastDelim = stack.pop();
 
-				if (c == ')' && lastDelim.charAt(0) != '(') {
-					
-					return false;
-
-				} else if (c == ']' && lastDelim.charAt(0) != '[') {
-
-					return false;
-
-				} else if (c == '}' && lastDelim.charAt(0) != '{') {
-
+				if (!isCloserFor(lastDelim.charAt(0),c)) {
 					return false;
 				}
 			}
@@ -70,5 +61,34 @@ public class BalancedDelimiters {
 		}
 
 		return true;
+	}
+
+	public static boolean isOpener(char c) {
+
+		if (c == '(' || c == '{' || c == '[') {
+			return true;
+		}
+
+		return false;
+	}
+
+	public static boolean isCloserFor(char opener, char closer) {
+
+		if (opener == '(' && closer == ')') {
+			
+			return true;
+
+		} else if (opener == '[' && closer == ']') {
+
+			return true;
+
+		} else if (opener == '{' && closer == '}') {
+
+			return true;
+
+		} else {
+
+			return false;
+		}
 	}
 }
