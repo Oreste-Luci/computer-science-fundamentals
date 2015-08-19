@@ -10,9 +10,35 @@ public class RecursiveTranversal {
 
         Node root = tranversal.createTree();
 
-        System.out.println("In-Order:   " + tranversal.inOrder(root));
-        System.out.println("Pre-Order:  " + tranversal.preOrder(root));
-        System.out.println("Post-Order: " + tranversal.postOrder(root));
+        System.out.println("Inorder:    " + tranversal.inOrder(root));
+        System.out.println("Preorder:   " + tranversal.preOrder(root));
+        System.out.println("Postorder:  " + tranversal.postOrder(root));
+        System.out.println("Levelorder: " + tranversal.levelOrder(root));
+    }
+
+    /**
+     * Breadth tranversal. By level.
+     */
+    public String levelOrder(Node node) {
+
+        if (node == null ) {
+            return "";
+        }
+
+        StringBuffer result = new StringBuffer(node.value).append(" ");
+
+        Node left = node.left;
+        Node right = node.right;
+
+        if (left != null) {
+            result.append(left.value).append(" ");
+        }
+
+        if (right != null) {
+            result.append(right.value).append(" ");
+        }
+
+        return result.toString() + (left!=null?levelOrder(left.left) + levelOrder(left.right):"") + (right!=null?levelOrder(right.left) + levelOrder(right.right):"");
     }
 
     /**

@@ -1,4 +1,6 @@
 import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Iterative Tree Tranversals Using Stack
@@ -11,14 +13,47 @@ public class IterativeTranversal {
 
         Node root = tranversal.createTree();
 
-        System.out.print("In-Order:   ");
+        System.out.print("Inorder:    ");
         tranversal.inOrder(root);
 
-        System.out.print("\nPre-Order:  ");
+        System.out.print("\nPreorder:   ");
         tranversal.preOrder(root);
 
-        System.out.print("\nPost-Order: ");
+        System.out.print("\nPostorder:  ");
         tranversal.postOrder(root);
+
+        System.out.print("\nLevelOrder: ");
+        tranversal.levelOrder(root);
+    }
+
+    /**
+     * Breadth tranversal. By level.
+     */
+    public void levelOrder(Node node) {
+
+        if (node == null) {
+            System.out.println("Tree is empty");
+            return;
+        }
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(node);
+
+        do {
+
+            node = queue.poll();
+
+            System.out.print(node.value + " ");
+
+            if (node.left != null) {
+                queue.add(node.left);
+            }
+
+            if (node.right != null) {
+                queue.add(node.right);
+            }
+
+        } while (queue.peek() != null);
     }
 
     /**
