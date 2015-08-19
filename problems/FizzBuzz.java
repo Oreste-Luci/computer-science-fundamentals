@@ -1,5 +1,8 @@
 import java.io.Console;
 
+/**
+ * @author Oreste Luci
+ */
 public class FizzBuzz {
 
 	public static void main(String[] args) {
@@ -33,9 +36,9 @@ public class FizzBuzz {
 			}
 
 			if (printNumber) {
-				System.out.print(i);	
+				System.out.print(i);
 			}
-			
+
 			printNumber = true;
 
 			System.out.println(" ");

@@ -1,4 +1,6 @@
-
+/**
+ * @author Oreste Luci
+ */
 public class GetMinimumStack {
 
 	private StackItem top = null;
@@ -73,7 +75,7 @@ public class GetMinimumStack {
 		System.out.println(stack.getMinimum()!=null?stack.getMinimum().value:"NULL");
 
 		stack.pop();
-		
+
 		stack.addStack(stack,30);
 		System.out.println(stack.getMinimum()!=null?stack.getMinimum().value:"NULL");
 

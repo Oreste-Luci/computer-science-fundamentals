@@ -1,5 +1,7 @@
 /**
  * Count the number of nodes on a binary tree
+ *
+ * @author Oreste Luci
  */
 public class BTNumberOfNodes {
 
@@ -46,7 +48,7 @@ public class BTNumberOfNodes {
 		n10.rightChild = n15;
 
 		System.out.println("Test (3): " + numberOfNodes(n10));
-	}	
+	}
 
 
 	public void testCase3() {
@@ -69,6 +71,6 @@ public class BTNumberOfNodes {
 		n15.rightChild = n17;
 
 		System.out.println("Test (7): " + numberOfNodes(n10));
-	}	
+	}
 
 }

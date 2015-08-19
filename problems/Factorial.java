@@ -3,6 +3,8 @@ import java.math.BigInteger;
 
 /**
  * Different ways of calculating the Factorial of a number
+ *
+ * @author Oreste Luci
  */
 public class Factorial {
 

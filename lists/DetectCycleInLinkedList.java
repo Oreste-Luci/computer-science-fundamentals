@@ -1,7 +1,7 @@
-
-
 /**
  * Determines if a linked list has a loop.
+ *
+ * @author Oreste Luci
  */
 public class DetectCycleInLinkedList {
 
@@ -24,7 +24,7 @@ public class DetectCycleInLinkedList {
 		System.out.println(hasCycle(one));
 
 		Node<String> two = new Node<>("2",one);
-		one.next = two;		
+		one.next = two;
 
 		System.out.println(hasCycle(one));
 	}

@@ -1,5 +1,7 @@
 import java.util.Stack;
-
+/**
+ * @author Oreste Luci
+ */
 public class BalancedDelimiters {
 
 	public static void main(String[] args) {
@@ -75,7 +77,7 @@ public class BalancedDelimiters {
 	public static boolean isCloserFor(char opener, char closer) {
 
 		if (opener == '(' && closer == ')') {
-			
+
 			return true;
 
 		} else if (opener == '[' && closer == ']') {

@@ -4,6 +4,8 @@ import java.util.Queue;
 
 /**
  * Iterative Tree Tranversals Using Stack
+ *
+ * @author Oreste Luci
  */
 public class IterativeTranversal {
 

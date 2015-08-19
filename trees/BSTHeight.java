@@ -1,6 +1,8 @@
 
 /**
  * Find the height of a Binary Tree. If only one node height is 0.
+ *
+ * @author Oreste Luci
  */
 public class BSTHeight {
 

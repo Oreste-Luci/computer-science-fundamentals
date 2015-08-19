@@ -1,6 +1,8 @@
 
 /**
  * Recursive Tree Tranversal
+ *
+ * @author Oreste Luci
  */
 public class RecursiveTranversal {
 

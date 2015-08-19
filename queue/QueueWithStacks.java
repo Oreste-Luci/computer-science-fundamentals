@@ -2,10 +2,12 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 /**
-* This class implements a Queue with two stacks
-*/
+ * This class implements a Queue with two stacks
+ *
+ * @author Oreste Luci
+ */
 public class QueueWithStacks {
-	
+
 
 	private Stack<String> stack1 = new Stack<>();
 	private Stack<String> stack2 = new Stack<>();

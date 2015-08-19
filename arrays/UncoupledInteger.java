@@ -2,6 +2,8 @@ import java.util.*;
 
 /*
  * Returnes the unmatched integer in an array
+ *
+ * @author Oreste Luci
  */
 public class UncoupledInteger {
 

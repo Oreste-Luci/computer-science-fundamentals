@@ -1,6 +1,8 @@
 
 /**
  * Merge Sort
+ *
+ * @author Oreste Luci
  */
 public class MergeSort {
 

@@ -2,8 +2,10 @@
 import java.util.Stack;
 
 /**
-* Reverses a Linked List
-*/
+ * Reverses a Linked List
+ *
+ * @author Oreste Luci
+ */
 public class ReverseLinkedList {
 
 
