@@ -1,8 +1,10 @@
 import java.io.Console;
 import java.math.BigInteger;
 
+/**
+ * Different ways of calculating the Factorial of a number
+ */
 public class Factorial {
-
 
 	public static void main(String[] args) {
 
@@ -20,6 +22,9 @@ public class Factorial {
 		System.out.println("Long:                 " + factorial(number));
 	}
 
+	/**
+	 * Least performing since the biggest number the long data type will fit is 9223372036854775807
+	 */
 	public static long factorial(long number) {
 
 		// IF number bigger than 20 it will not fit into a long
