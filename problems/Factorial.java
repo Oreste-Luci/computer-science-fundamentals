@@ -13,9 +13,11 @@ public class Factorial {
 
 		long number = Long.parseLong(numberStr);
 
-		System.out.println(factorialBig(number));
+		System.out.println("BigInteger:           " + factorialBig(number));
 
-		System.out.println(factorial(number));
+		System.out.println("BigInteger Recursive: " + factorialRecursive(new BigInteger(""+number)));
+
+		System.out.println("Long:                 " + factorial(number));
 	}
 
 	public static long factorial(long number) {
@@ -27,7 +29,7 @@ public class Factorial {
 
 		long result = 1;
 		for (int i=1; i<=number; i++) {
-			result *= i; 
+			result *= i;
 		}
 
 		return result;
@@ -42,5 +44,14 @@ public class Factorial {
 		}
 
 		return result;
+	}
+
+	public static BigInteger factorialRecursive(BigInteger number) {
+
+		if (number.compareTo(BigInteger.ZERO)==0) {
+			return BigInteger.ONE;
+		} else {
+			return number.multiply(factorialRecursive(number.subtract(BigInteger.ONE)));
+		}
 	}
 }
