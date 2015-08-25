@@ -77,38 +77,42 @@ public class SherlockAndTheBeast {
 
     public static String findDecentNumber(int digits) {
 
-        if (digits < 3) {
+        StringBuffer output = new StringBuffer();
 
-            throw new RuntimeException("None Available");
+        while (true) {
 
-        } else if (digits == 3) {
-
-            return "555";
-
-        } else if (digits % 5 == 0 && digits % 3 == 0) {
-
-            StringBuffer output = new StringBuffer();
-
-            for (int i=0; i<digits; i++) {
-                output.append("5");
+            if (digits < 3) {
+                return "-1";
             }
 
-            return output.toString();
-
-        } else if (digits % 5 == 0) {
-
-            StringBuffer output = new StringBuffer();
-
-            for (int i=0; i<digits; i++) {
-                output.append("3");
+            if (digits == 3) {
+                output.append("555");
+                break;
             }
 
-            return output.toString();
+            if (digits == 5) {
+                output.append("33333");
+                break;
+            }
 
-        } else {
+            if (digits == 10) {
+                output.append("3333333333");
+                break;
+            }
 
-            return "555" + findDecentNumber(digits - 3);
+            if (digits % 5 == 0 && digits % 3 == 0) {
+                for (int i=0; i<digits; i++) {
+                    output.append("5");
+                }
+                break;
+            }
+
+            output.append("555");
+
+            digits = digits - 3;
 
         }
+
+        return output.toString();
     }
 }
