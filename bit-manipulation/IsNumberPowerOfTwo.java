@@ -18,7 +18,7 @@ public class IsNumberPowerOfTwo {
     }
 
     /**
-     * Thie method uses the following property;
+     * The method uses the following property;
      * 2^n & (2^n - 1) = 0
      */
     public static boolean isPowerOfTwo(int number) {

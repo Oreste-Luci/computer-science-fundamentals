@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
 /**
- * Determines is a ransom note can be written form the magazine;
+ * Determines if a ransom note can be written form the magazine;
  *
  * @author Oreste Luci
  */

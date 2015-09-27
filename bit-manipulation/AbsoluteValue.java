@@ -22,6 +22,11 @@ public class AbsoluteValue {
 
         int mask = number >> 31;
 
+        System.out.println("Number: " + Integer.toBinaryString(number));
+        System.out.println("Mask: " + Integer.toBinaryString(mask));
+        System.out.println("Mask + Number: " + Integer.toBinaryString(mask + number));
+        System.out.println("(Mask + Number) ^ Mask: " + Integer.toBinaryString((mask + number)^mask));
+
         int result = (mask + number)  ^ mask;
 
         return result;
